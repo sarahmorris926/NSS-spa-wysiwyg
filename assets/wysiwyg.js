@@ -63,3 +63,12 @@ let famousArr = [
   }
 ];
 
+function famousPeople() {
+  let famousCard = "";
+  for (let i = 0; i < famousArr.length; i++) {
+    if ((i+1) % 2 === 0) {
+      
+    }
+  }
+}
+

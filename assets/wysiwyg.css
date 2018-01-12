@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+}
+
+#person {
+  border: 2px solid slategray;
+  display: flex;
+  align-items: center;
+}
+
+#person img {
+  height: 50px;
+  width: 25px;
+}
