@@ -9,6 +9,15 @@
 }
 
 #person img {
-  height: 50px;
-  width: 25px;
+  height: 30em;
+  width: 20em;
 }
+
+#blue {
+  background-color: lightblue;
+}
+
+#yellow {
+  background-color: lightyellow;
+}
+

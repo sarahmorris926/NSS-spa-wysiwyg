@@ -1,5 +1,7 @@
 'use strict';
 
+let personContainer = document.getElementById("person");
+
 let famousArr = [
   {
     title: "Musician",
@@ -30,7 +32,7 @@ let famousArr = [
       birth: 1747,
       death: 1797
     }
-  }
+  },
   {
     title: "President",
     name: "Barack Obama",
@@ -40,7 +42,7 @@ let famousArr = [
       birth: 1961,
       death: "N/A" 
     }
-  }
+  },
   {
     title: "Pianist",
     name: "Frederic Chopin",
@@ -50,7 +52,7 @@ let famousArr = [
       birth: 1810,
       death: 1849
     }
-  }
+  },
   {
     title: "Orange Monster",
     name: "Donald Trump",
@@ -67,8 +69,14 @@ function famousPeople() {
   let famousCard = "";
   for (let i = 0; i < famousArr.length; i++) {
     if ((i+1) % 2 === 0) {
-      
+      let famousOutput = `<div id="yellow"><header> ${famousArr[i].name}, ${famousArr[i].title}</header><p>Bio: ${famousArr[i].bio}</p><img src=${famousArr[i].image}><p>Lifespan: ${famousArr[i].lifespan}</p></div>`
+      famousCard += famousOutput;
+    } else {
+      let famousOutput = `<div id="blue"><header> ${famousArr[i].name}, ${famousArr[i].title}</header><p>Bio: ${famousArr[i].bio}</p><img src=${famousArr[i].image}><p>Lifespan: ${famousArr[i].lifespan}</p></div>`
+      famousCard += famousOutput;
     }
-  }
+  };
+  personContainer.innerHTML = famousCard;
 }
 
+famousPeople();
