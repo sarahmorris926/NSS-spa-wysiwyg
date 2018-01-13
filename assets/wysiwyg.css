@@ -2,22 +2,30 @@
   display: flex;
 }
 
-#person {
-  border: 2px solid slategray;
-  display: flex;
-  align-items: center;
-}
 
-#person img {
+
+img {
   height: 30em;
   width: 20em;
 }
 
-#blue {
+.blue {
   background-color: lightblue;
 }
 
-#yellow {
+.yellow {
   background-color: lightyellow;
+}
+
+.card {
+  border: 2px solid slategray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.dottedBorder {
+  border: 2px dotted red;
 }
 

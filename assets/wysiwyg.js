@@ -1,6 +1,6 @@
 'use strict';
 
-let personContainer = document.getElementById("person");
+let personContainer = document.getElementById("container");
 
 let famousArr = [
   {
@@ -65,18 +65,30 @@ let famousArr = [
   }
 ];
 
+
 function famousPeople() {
   let famousCard = "";
   for (let i = 0; i < famousArr.length; i++) {
     if ((i+1) % 2 === 0) {
-      let famousOutput = `<div id="yellow"><header> ${famousArr[i].name}, ${famousArr[i].title}</header><p>Bio: ${famousArr[i].bio}</p><img src=${famousArr[i].image}><p>Lifespan: ${famousArr[i].lifespan}</p></div>`
+      let famousOutput = `<div class="yellow card"><header> ${famousArr[i].name}, ${famousArr[i].title}</header><p>Bio: ${famousArr[i].bio}</p><img src=${famousArr[i].image}><p>Lifespan: ${famousArr[i].lifespan.birth} - ${famousArr[i].lifespan.death}</p></div>`
       famousCard += famousOutput;
     } else {
-      let famousOutput = `<div id="blue"><header> ${famousArr[i].name}, ${famousArr[i].title}</header><p>Bio: ${famousArr[i].bio}</p><img src=${famousArr[i].image}><p>Lifespan: ${famousArr[i].lifespan}</p></div>`
+      let famousOutput = `<div class="blue card"><header> ${famousArr[i].name}, ${famousArr[i].title}</header><p>Bio: ${famousArr[i].bio}</p><img src=${famousArr[i].image}><p>Lifespan: ${famousArr[i].lifespan.birth} - ${famousArr[i].lifespan.death}</p></div>`
       famousCard += famousOutput;
     }
   };
   personContainer.innerHTML = famousCard;
+  personContainer.addEventListener("click", () => {
+    console.log("you clicked");
+    personContainer.classList.add("dottedBorder");
+    })
 }
 
 famousPeople();
+
+
+// Event listener for dotted border
+
+// personContainer.addEventListener("click", () => {
+//   console.log("you clicked");
+// })
